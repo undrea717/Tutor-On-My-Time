@@ -1,0 +1,154 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background: url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.btn-circle.btn-xl {
+    width: 200px;
+    height: 200px;
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-size: 24px;
+    line-height: 1.33;
+    background-color: 
+    color: black;
+    opacity: 0.5;
+    margin-top: 10%;
+    font-size: 20px;
+
+}
+
+.btn-circle.btn-xl:hover {
+    opacity: 0.8;
+    border: solid gray 1px;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+} 
+
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+#student, #teacher {
+    width: 110px;
+    height: 110px;
+}
+
+#choose {
+    color: white;
+    font-size: 40px;
+    margin-top: 6%;
+}
+
+#iam {
+    color: white; 
+    margin-top: 5%
+}
+
+.navbar {
+    background: transparent;
+    border: none;
+}
+
+.navbar-default .navbar-brand {
+    border: none;
+    color: #E3E3E3;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #D1D1D1;
+}
+
+#datepicker {
+    background-color: white;
+    border-radius: 8px;
+}
+
+#datepicker > span:hover {
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+    
+    .btn-circle.btn-xl{
+        width: 160px;
+        height: 160px;
+        font-size: 16px;
+    }
+
+    #student, #teacher {
+        width: 80px;
+        height: 80px;
+    }
+    
+    #choose {
+    font-size: 35px;
+    }
+
+    #iam {
+    font-size: 23px;
+    }
+
+  }
+
+@media screen and (max-width: 768px) {
+    .btn-circle.btn-xl{
+        width: 120px;
+        height: 120px;
+        font-size: 12px;
+    }
+
+    #student, #teacher {
+        width: 60px;
+        height: 60px;
+    }
+
+    #choose {
+    font-size: 30px;
+    }
+    
+    #iam {
+    font-size: 19px;
+    }
+
+  }
+
+@media screen and (max-width: 640px) {
+    .btn-circle.btn-xl{
+        width: 110px;
+        height: 110px;
+        font-size: 11px;
+    }
+
+    #student, #teacher {
+        width: 55px;
+        height: 55px;
+    }
+
+    #choose {
+    font-size: 25px;
+    }
+
+    #iam {
+    font-size: 17px;
+    }
+
+  }
+
