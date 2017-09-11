@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define("tutors", {
+  var Tutor = sequelize.define("tutors", {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -7,10 +7,24 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    availability: {
-      type: DataTypes.TEXT,
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      len: [1]
+    },
+    image: {
+      type: DataTypes.STRING,
       allowNull: false,
       len: [1]
     }
+
+
   });
+
+  // Tutor.associate = function(models) {
+  //   Tutor.hasMany(models.Availability, {
+  //     onDelete: "cascade"
+  //   });
+  // };
+  return Tutor;
 };
