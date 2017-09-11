@@ -2,20 +2,22 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-	// app.post("", function(req, res){
+	app.post("/student", function(req, res){
 
-	// 	db.Students.create({
+		db.Students.create({
 			
-	// 		text: req.body.text,
+			name: req.body.name,
 
-	// 		complete: req.body.complete
+			email: req.body.email,
 
-	// 	}).then(function(dbStudents){
-	// 		res.json(dbStudents);
-	// 	})
-	// 	.catch(function(err){
-	// 		res.json(err);
+			subject: req.body.subject
 
-	// 	});
-	// });
+		}).then(function(dbStudents){
+			res.json(dbStudents);
+		})
+		.catch(function(err){
+			res.json(err);
+
+		});
+	});
 };

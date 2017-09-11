@@ -22,10 +22,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // app.use(express.static("public"));
 // Routes
 // =============================================================
-// require("./routes/html-routes.js")(app);
-// require("./routes/tutors-routes.js")(app);
+require("./routes/html-routes.js")(app);
+require("./routes/tutors-routes.js")(app);
 require("./routes/student-routes.js")(app);
-// require("./routes/avail-routes.js")(app);
+require("./routes/avail-routes.js")(app);
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: true }).then(function() {
