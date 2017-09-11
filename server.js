@@ -28,7 +28,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(path.join(__dirname, "/public")));
 // Routes
 // =============================================================
-./routes/avail-routes.js")(app);
+
 
 // Routes
 // =============================================================

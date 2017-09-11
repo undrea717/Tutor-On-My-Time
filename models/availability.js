@@ -20,9 +20,7 @@ module.exports = function(sequelize, DataTypes) {
       }
   });
 
-  // Availability.associate = function(models) {
-  //   Availability.belongsTo(models.Tutor);
-  // };
+ilabi
   return Availability;
 
 };
