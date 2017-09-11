@@ -7,6 +7,10 @@ body {
     background-size: cover;
 }
 
+body > .container {
+    padding-top: 50px;
+}
+
 .btn-circle.btn-xl {
     width: 200px;
     height: 200px;
