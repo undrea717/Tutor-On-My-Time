@@ -17,8 +17,9 @@ body {
     background-color: 
     color: black;
     opacity: 0.5;
-    margin-top: 10%;
     font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
 
 }
 
@@ -56,7 +57,7 @@ body {
 
 #iam {
     color: white; 
-    margin-top: 5%
+    margin-top: 3%
 }
 
 .navbar {
@@ -82,8 +83,15 @@ body {
     cursor: pointer;
 }
 
+.jumbotron {
+    background-color: transparent;
+    color: #E3E3E3;
+    margin-top: 5%;
+}
 
-
+.btn-default {
+    opacity: 0.6;
+}
 
 @media screen and (max-width: 1000px) {
     
@@ -91,6 +99,8 @@ body {
         width: 160px;
         height: 160px;
         font-size: 16px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     #student, #teacher {
@@ -113,6 +123,9 @@ body {
         width: 120px;
         height: 120px;
         font-size: 12px;
+        margin-bottom: 0;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     #student, #teacher {
@@ -135,6 +148,8 @@ body {
         width: 110px;
         height: 110px;
         font-size: 11px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     #student, #teacher {
