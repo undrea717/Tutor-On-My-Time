@@ -4,12 +4,12 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 //Code to validate with firebase
-var admin = require("firebase-admin");
-var serviceAccount = require("./tutorscheduling-d97eb-firebase-adminsdk-udwcp-52f09e7f6e.json");
-var firebaseAdmin = admin.initializeApp({
-	credential: admin.credential.cert(serviceAccount),
-	databaseURL: "https://tutorscheduling-d97eb.firebaseio.com"
-});
+// var admin = require("firebase-admin");
+// var serviceAccount = require("./tutorscheduling-d97eb-firebase-adminsdk-udwcp-52f09e7f6e.json");
+// var firebaseAdmin = admin.initializeApp({
+// 	credential: admin.credential.cert(serviceAccount),
+// 	databaseURL: "https://tutorscheduling-d97eb.firebaseio.com"
+// });
 
 var app = express();
 
@@ -29,13 +29,13 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(path.join(__dirname, "/public")));
 
 //create function middleware
-function isAuthenticated(request, response, next) {
+// function isAuthenticated(request, response, next) {
 	// check if user is logged in
 	//if they are, attach the use to the request object and call next
 	//if they are not, send them to the login page
 	//with a message saying: "login"
 
-}
+// }
 
 // Routes
 // =============================================================
