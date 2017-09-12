@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutor On My Time</title>
+  <title>Tutor On My Time</title>
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<script src="https://use.fontawesome.com/c0a3186a39.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/c0a3186a39.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
-	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'>
-	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
-	<link rel="stylesheet" type="text/css" href="./assets/css/form-basic.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link rel="stylesheet" type="text/css" href="./assets/css/form-basic.css">
 
 </head>
 <body>
@@ -41,17 +41,24 @@
             </select>
             </div>
             <div class="form-row">
-	        <label style="color: #E3E3E3; font-weight: normal;">Date</label>
-		       <div class="input-group date" id="datepicker">
-		          <input class="form-control"/><span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-		       </div>
-	        </div>
+          <label style="color: #E3E3E3; font-weight: normal;">Day</label>
+            <select class="form-control" id="days" name="days">
+              <option value="" selected="selected">(please select a day)</option>
+              <option>Sunday</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+            </select>
+          </div>
             <div class="form-row">
               <label style="color: #E3E3E3; font-weight: normal;" >Select Time:</label>
-		        <div class="input-group date" id="timepicker">
-		          <input class="form-control"/><span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
-		        </div>
-		    </div>
+            <div class="input-group date" id="timepicker">
+              <input class="form-control"/><span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
+            </div>
+        </div>
             <br />
             <div class="form-row">
                 <button type="submit">Submit Form</button>
@@ -80,5 +87,3 @@
 
 </body>
 </html>
-
-
