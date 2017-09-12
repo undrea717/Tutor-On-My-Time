@@ -16,10 +16,10 @@ CREATE TABLE `tutors` (
   `image` VARCHAR(2000) NOT NULL DEFAULT 'image DB',
   PRIMARY KEY (`id`));
   
-  CREATE TABLE `availability` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `day` VARCHAR(20) NOT NULL DEFAULT 'Monday',
-  `starTime` TIMESTAMP NOT NULL DEFAULT now(),
-  `endTime` TIMESTAMP NOT NULL DEFAULT now(),
-  `subject` VARCHAR(70) NOT NULL DEFAULT 'Subject DB',
-  PRIMARY KEY (`id`));
+  -- CREATE TABLE `availability` (
+  -- `id` INT NOT NULL AUTO_INCREMENT,
+  -- `day` VARCHAR(20) NOT NULL DEFAULT 'Monday',
+  -- `starTime` TIMESTAMP NOT NULL DEFAULT now(),
+  -- `endTime` TIMESTAMP NOT NULL DEFAULT now(),
+  -- `subject` VARCHAR(70) NOT NULL DEFAULT 'Subject DB',
+  -- PRIMARY KEY (`id`));

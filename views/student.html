@@ -19,7 +19,7 @@
 <body>
 <div class="container">
     <div class="main-content">
-        <form class="form-basic" method="post" action="#">
+        <form class="form-basic" method="post" action="/student">
             <div class="form-title-row">
                 <h1 style="color: #E3E3E3">Student Information</h1>
             </div>
@@ -27,7 +27,7 @@
             <div class="form-row">
           <label style="color: #E3E3E3; font-weight: normal">Name: </label>
           <div>
-            <input type="text" class="form-control" placeholder="Enter Your Full Name">
+            <input name="name" type="text" class="form-control" placeholder="Enter Your Full Name">
           </div>
             </div>
             <div class="form-row">
@@ -54,9 +54,9 @@
             </select>
           </div>
             <div class="form-row">
-              <label style="color: #E3E3E3; font-weight: normal;" >Select Time:</label>
+              <label style="color: #E3E3E3; font-weight: normal;"  >Select Time:</label>
             <div class="input-group date" id="timepicker">
-              <input class="form-control"/><span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
+              <input name="time" class="form-control"/><span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
             </div>
         </div>
             <br />
