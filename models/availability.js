@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
-  var Availability = sequelize.define("availability", {
+  var Availability = sequelize.define("Availability", {
     day: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
       },
       startTime: {
         type: DataTypes.TIME,
@@ -18,9 +18,25 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       }
-  });
+    },
+  
 
-//ilabi
+{
+    classMethods: {
+      associate: function(models) {
+        Availability.belongsTo(models.Tutor, {
+            onDelete: "CASCADE",
+            hooks: true,
+            foreignKey: {
+              allowNull: true
+            }
+        })
+      }
+
+  }
+
+   
+})
   return Availability;
-
+  
 };

@@ -1,5 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
-  var Tutor = sequelize.define("tutors", {
+  var Tutor = sequelize.define("Tutors", {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -17,14 +22,30 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     }
+  },
 
 
-  });
+  
+{
+    classMethods: {
+      associate: function(models) {
+        Tutor.hasMany(models.Availability, {
+            onDelete: "CASCADE",
+            hooks: true,
+            foreignKey: {
+              allowNull: true
+            }
+        })
+      }
 
-  // Tutor.associate = function(models) {
-  //   Tutor.hasMany(models.Availability, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+  }
+
+})
+
+
+
+  
+
+
   return Tutor;
-};
+}
