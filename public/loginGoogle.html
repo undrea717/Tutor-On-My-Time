@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Authorization</title>
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBvM-AsGPeQjN4V98um55KEhWjmqrBwIkk",
+	    authDomain: "tutorscheduling-d97eb.firebaseapp.com",
+	    databaseURL: "https://tutorscheduling-d97eb.firebaseio.com",
+	    projectId: "tutorscheduling-d97eb",
+	    storageBucket: "tutorscheduling-d97eb.appspot.com",
+	    messagingSenderId: "825607904372"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body>
+	<h1>Google Authorization</h1>
+	<p>Login With Firebase</p>
+	<h3 id="googleName"></h3>
+	<img id="googleImg" src="" height="200px" width="200px">
+	<p id="googleEmail"></p>>
+	<button onclick={signInWithGoogle()}>
+		Sign In with Google
+	</button>
+</body>
+<script type="text/javascript">
+	function signInWithGoogle(){
+		var googleAuthProvider = new firebase.auth.GoogleAuthProvider;
+
+		firebase.auth().signInWithPopup(googleAuthProvider)
+			.then(function(data){
+				console.log(data);
+				var vname = data.additionalUserInfo.profile.given_name + " " + data.additionalUserInfo.profile.family_name;
+				var vphoto = data.additionalUserInfo.profile.picture;
+				var vemail = data.additionalUserInfo.profile.email;
+				document.getElementById("googleImg").setAttribute("src",vphoto);
+				document.getElementById("googleEmail").textContent = vemail;
+				document.getElementById("googleName").textContent = vname;
+			})
+			.catch(function(error){
+				console.log(error);
+			})
+			
+	}
+</script>
+</html>

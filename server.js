@@ -1,9 +1,15 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-
+//var methodOverride = require("method-override");
 var path = require("path");
 
+//Code to validate with firebase
+var admin = require("firebase-admin");
+var serviceAccount = require("./tutorscheduling-d97eb-firebase-adminsdk-udwcp-52f09e7f6e.json");
+var firebaseAdmin = admin.initializeApp({
+	credential: admin.credential.cert(serviceAccount),
+	databaseURL: "https://tutorscheduling-d97eb.firebaseio.com"
+});
 
 var app = express();
 
@@ -15,20 +21,21 @@ var db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
-
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(bodyParser.text());
-
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
 // Static directory
-
-
-
 app.use(express.static(path.join(__dirname, "/public")));
-// Routes
-// =============================================================
 
+//create function middleware
+function isAuthenticated(request, response, next) {
+	// check if user is logged in
+	//if they are, attach the use to the request object and call next
+	//if they are not, send them to the login page
+	//with a message saying: "login"
+
+}
 
 // Routes
 // =============================================================

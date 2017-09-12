@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
       }
   });
 
-ilabi
+//ilabi
   return Availability;
 
 };

@@ -10,6 +10,27 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<script src="https://use.fontawesome.com/c0a3186a39.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+
+	<!-- part for the login with firebase -->
+
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBvM-AsGPeQjN4V98um55KEhWjmqrBwIkk",
+	    authDomain: "tutorscheduling-d97eb.firebaseapp.com",
+	    databaseURL: "https://tutorscheduling-d97eb.firebaseio.com",
+	    projectId: "tutorscheduling-d97eb",
+	    storageBucket: "tutorscheduling-d97eb.appspot.com",
+	    messagingSenderId: "825607904372"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+
+	<!-- end of login with firebase -->
+
 </head>
 <body>
 
@@ -33,16 +54,17 @@
        	 <div class="col-md-1"></div>
          <div class="col-md-10" style="text-align: center">
 		   <button type="submit" class="btn btn-default btn-circle btn-xl">
-		   <img id="student" src="./assets/images/student.png"><br />
+		   <img id="student" src="./assets/images/student.png" onclick={signInWithGoogle()}><br />
 		  Student
 	       </button>
-	       <button type="submit" class="btn btn-default btn-circle btn-xl">
+	       <button type="submit" class="btn btn-default btn-circle btn-xl" onclick={signInWithGoogle()}>
 	       <img id=teacher src="./assets/images/teacher.png"><br />
 	      Tutor
 	       </button>
 	      </div>
          <div class="col-md-1"></div>
       </div>
+      <!-- <div id="firebaseui-auth-container"></div> -->
   </div>
   <br />
 
@@ -53,6 +75,32 @@
 </footer>
 
 </body>
+	
+	<!-- Second part of the login with firebase authentication -->
+
+	<script type="text/javascript">
+		function signInWithGoogle(){
+			var googleAuthProvider = new firebase.auth.GoogleAuthProvider;
+
+			firebase.auth().signInWithPopup(googleAuthProvider)
+				.then(function(data){
+					console.log(data);
+					// var vname = data.additionalUserInfo.profile.given_name + " " + data.additionalUserInfo.profile.family_name;
+					// var vphoto = data.additionalUserInfo.profile.picture;
+					// var vemail = data.additionalUserInfo.profile.email;
+					// document.getElementById("googleImg").setAttribute("src",vphoto);
+					// document.getElementById("googleEmail").textContent = vemail;
+					// document.getElementById("googleName").textContent = vname;
+				})
+				.catch(function(error){
+					console.log(error);
+				})
+				
+		}
+	</script>
+
+	<!-- end of second part of authentication -->
+
 </html>
 
 
