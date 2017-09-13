@@ -1,19 +1,19 @@
 module.exports = function(sequelize, DataTypes) {
-  var Student = sequelize.define("students", {
+  var Students = sequelize.define("students", {
     name: { 
     	type: DataTypes.STRING,
-    	allowNull: false,
+    	required: true,
     	validate: {
     		len:[1] 
     	}
     },
-    email: {
-    	type:DataTypes.STRING,
-    	allowNull: false,
-    	validate: {
-    		len:[1] 
-    	}
-    },
+    // email: {
+    // 	type:DataTypes.STRING,
+    // 	allowNull: false,
+    // 	validate: {
+    // 		len:[1] 
+    // 	}
+    // },
     subject: {
     	type:DataTypes.STRING,
     	allowNull: false,
@@ -22,5 +22,5 @@ module.exports = function(sequelize, DataTypes) {
     	}
     },
   });
-  return Student
+  return Students
 };

@@ -14,13 +14,14 @@
 <body>
   <body data-spy="scroll" data-target="#navigation_bar">
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron" style="height: 150px; padding-top: 0px; margin-bottom: 0px;">
       <h1 class="text-center">Choose Your Tutor</h1>
-      <h5 class="text-center" style="line-height: 22px;">Tutor On My Time is pleased to offer you the ability to search the right tutor for your needs. <br/> Once you find the right tutor, choose the tutor and the tutor will respond within 24 hours.</h5>
+      <h5 class="text-center" style="line-height: 22px;">Tutor On My Time is pleased to offer you the ability to choose the right tutor for your needs. <br/> Once you find the right tutor, choose the tutor and the tutor will respond within 24 hours.</h5>
     </div>
     <div>
 		<div class="col-md-2"></div>
         <div class="col-md-8" style="background-color: #F9F9F9; border: solid 1px #757575; margin-bottom: 15%; border-radius: 5px">
+         <form class="form-basic" method="get" action="/choose">
             <h3 id="section-1">Tutor 1</h3>
             <div class="row">
 			  <div class="col-lg-6">
@@ -77,6 +78,7 @@
             <hr>
               <div class="form-row text-center">
                 <button type="submit" class="btn" style="color: white; background-color: #355166">Submit Form</button>
+            </form>
               </div>
             <br>
         </div>
