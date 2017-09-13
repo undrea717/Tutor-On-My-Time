@@ -9,6 +9,7 @@ var path = require("path");
 // 	credential: admin.credential.cert(serviceAccount),
 // 	databaseURL: "https://tutorscheduling-d97eb.firebaseio.com"
 // });
+var ejs = require('ejs');
 
 var app = express();
 
