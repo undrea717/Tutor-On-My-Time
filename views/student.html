@@ -15,7 +15,28 @@
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
   <link rel="stylesheet" type="text/css" href="./assets/css/form-basic.css">
 
-</head>
+  <!-- part for the login with firebase -->
+
+  <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBvM-AsGPeQjN4V98um55KEhWjmqrBwIkk",
+      authDomain: "tutorscheduling-d97eb.firebaseapp.com",
+      databaseURL: "https://tutorscheduling-d97eb.firebaseio.com",
+      projectId: "tutorscheduling-d97eb",
+      storageBucket: "tutorscheduling-d97eb.appspot.com",
+      messagingSenderId: "825607904372"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+
+  <!-- end of login with firebase -->
+
+
+  </head>
 <body>
 <div class="container">
     <div class="main-content">
@@ -27,7 +48,9 @@
             <div class="form-row">
           <label style="color: #E3E3E3; font-weight: normal">Name: </label>
           <div>
-            <input name="name" type="text" class="form-control" placeholder="Enter Your Full Name">
+
+            <input name="name" type="text" class="form-control" placeholder="Enter Your Full Name" id="nameToDisplay">
+
           </div>
             </div>
             <div class="form-row">
@@ -83,7 +106,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js'></script>
 <script type="text/javascript" src="./assets/js/app.js"></script>
-
+<script type="text/javascript" src="./assets/js/app3.js"></script>
 
 </body>
 </html>
