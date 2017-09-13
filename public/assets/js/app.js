@@ -23,5 +23,6 @@ $(function() {
       down: "fa fa-chevron-down",
     }
   });
+
 });
 

@@ -2,7 +2,6 @@ var express = require("express");
 var bodyParser = require("body-parser");
 //var methodOverride = require("method-override");
 var path = require("path");
-
 //Code to validate with firebase
 // var admin = require("firebase-admin");
 // var serviceAccount = require("./tutorscheduling-d97eb-firebase-adminsdk-udwcp-52f09e7f6e.json");
