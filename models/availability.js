@@ -1,23 +1,20 @@
 module.exports = function(sequelize, DataTypes) {
   var Availability = sequelize.define("availability", {
-//     day: {
-//       type: DataTypes.STRING,
-//       allowNull: false
-//       },
-//       startTime: {
-//         type: DataTypes.TIME,
-//         allowNull: false,
-//         defaultValue: false
-//       },
-//       endTime: {
-//         type: DataTypes.TIME,
-//         allowNull: false,
-//         defaultValue: false
-//       },
-//       subject:{
-//         type: DataTypes.STRING,
-//         allowNull: false
-//       }
+    option1: {
+      type: DataTypes.STRING,
+      allowNull: false
+      },
+      option2: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: false
+      },
+      option3: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: false
+      }
+      
 //     },
   
 
