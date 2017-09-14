@@ -6,6 +6,9 @@ module.exports = function(app) {
 	var results;
 
 	app.post("/student", function(req, res){
+
+		console.log(db.students);
+
 		
 		console.log('works')
 
@@ -60,7 +63,6 @@ module.exports = function(app) {
 
 		});
 
-		
 		db.students.create ({
 			
 			name: req.body.name,
@@ -79,6 +81,12 @@ module.exports = function(app) {
 			res.json(err);
 
 		});
+
+			console.log(req.body.name);
+			console.log(req.body.email);
+			console.log(req.body.subject);
+			console.log(req.body);
+
 	});
 
 	

@@ -28,6 +28,24 @@ module.exports = function(app) {
   });
 
 
+	app.get("/student", function(req, res){
+		db.Tutors.FindAll({
+			where: day == req.body.days,
+		})
+
+		// var query = {};
+	 //      if(req.body.days == Tutors_day){
+	 //      	console.log("okay");
+	 //         query.tutorName = req.query.tutor_name;
+
+
+		// }
+		// console.log("okay");
+
+		// console.log(query);
+		// console.log(Tutors_day)
+	})
+
 
 }
   

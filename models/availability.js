@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Availability = sequelize.define("availability", {
+    
     option1: {
       type: DataTypes.STRING,
       allowNull: false
@@ -15,6 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         defaultValue: false
       }
       
+
 //     },
   
 

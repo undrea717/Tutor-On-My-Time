@@ -3,6 +3,8 @@ var db = require("../models");
 module.exports = function(app) {
   console.log('working??')
 
+
+
   app.get("/choose", function(req, res){
       
 
@@ -41,12 +43,63 @@ module.exports = function(app) {
   
 //   app.post("/tutor", function(req, res) {
 
+
 //     db.availabilities.create({
       
 //       day: req.body.days,
 //       startTime: req.body.timepicker,
 //       subject: req.body.subject
 
+
+//     db.availabilities.create({
+      
+//       day: req.body.days,
+//       startTime: req.body.timepicker,
+//       subject: req.body.subject
+
+
+      
+//     }).then(function(dbTutor){
+//       res.redirect("/bye")
+//     })
+//     .catch(function(err){
+//       res.json(err);
+//     });
+//     console.log(req.body.days);
+//       console.log(req.body.time);
+//       console.log(req.body.subject);
+//       console.log(req.body)
+
+
+//   });
+
+//   app.post("/student", function(req, res){
+//     var query = {};
+//       if(req.body.days == availabilities.day && req.body.timepicker == availabilities.startTime){
+//         id.push(query);
+
+      
+//         // db.Availability.findAll({
+//         //   where: query,
+//         //   include: [db.tutors]
+//         // })
+
+//          console.log(req.body.day);
+
+
+//       }
+//     // .then(function(dbAvailability){
+      
+//     //   res.redirect("/choose");
+//     // })
+//     // .catch(function(err){
+//     //   res.json(err);
+
+//     // });
+ 
+// });
+
+}
 
       
 //     }).then(function(dbTutor){
