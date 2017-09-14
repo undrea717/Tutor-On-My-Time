@@ -1,11 +1,9 @@
 var db = require("../models");
-// var express = require("express");
-// var router = express.Router();
 
 module.exports = function(app) {
 	var results;
 
-	app.post("/student", function(req, res){
+	app.post("/api", function(req, res){
 		
 		console.log('works')
 
@@ -17,14 +15,26 @@ module.exports = function(app) {
 			}
 
 		}).then(function(results){
-			 // return results[0].name;
-			console.log('working2');
-			var results = results[0].name;
+			console.log(results)
+			res.json("/api", {
 			
-			});res.render("/choose", {
+				tutor: results
+
+			})
+		
+		}).catch(function(err){
+			
+
+		});
+			 
+	});	
+			// console.log('working2');
+			// var results = results[0].name;
+			
+			// });res.render("/choose", {
 
 
-			name: results
+			// name: results
 				
 			
 				
@@ -35,9 +45,9 @@ module.exports = function(app) {
 			// 	option1: results[0].name
 
 
-			}).then(function(res){
+			// }).then(function(res){
 
-				console.log('thisworks')
+			// 	console.log('thisworks')
 			
 			// if(results >= 0){
 
@@ -55,12 +65,13 @@ module.exports = function(app) {
 			// 	res.redirect("/students")
 			// }
 		
-			}).catch(function(err){
+			// }).catch(function(err){
 			
 
-		});
+		// });
 
-		
+	app.post("/student", function(req, res){
+
 		db.students.create ({
 			
 			name: req.body.name,
@@ -84,3 +95,4 @@ module.exports = function(app) {
 	
 				
 }
+
